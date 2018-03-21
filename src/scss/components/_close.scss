@@ -1,0 +1,20 @@
+.close {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: relative;
+  display: inline-block;
+  line-height: 55px;
+  font-size: 41px;
+  text-transform: uppercase;
+  padding: 0 10px;
+  color: $color1;
+  border-radius: 3px;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+
+  &:hover {
+    color: lighten(#f2594b, 5%);
+  }
+}

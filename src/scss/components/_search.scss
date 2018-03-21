@@ -1,0 +1,27 @@
+.search {
+  margin-bottom: 12px;
+  margin-top: 12px;
+  padding: 0 42px;
+  .search__label {
+    display: block;
+    margin-bottom: 5px;
+    color: $titleColor;
+  }
+
+  .search__input {
+    width: 100%;
+    border: 1px solid $color3;
+    border-radius: 3px;
+    padding: 5px 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .search {
+    padding: 0;
+    margin-bottom: 34px;
+    .search__input {
+      width: 420px;
+    }
+  }
+}

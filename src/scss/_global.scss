@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  color: $textColor;
+  margin: 0;
+  font-family: $fontFamilyText;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  color: $titleColor;
+}
+
+.container {
+  max-width: $containerWidth;
+  margin: auto;
+  width: 100%;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto 12px;
+}

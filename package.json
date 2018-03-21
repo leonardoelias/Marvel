@@ -1,0 +1,30 @@
+{
+  "name": "front-end-starter",
+  "version": "1.0.0",
+  "description": "",
+  "private": false,
+  "main": "app.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "author": "SundownDEV",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-minify": "^0.3.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-minify": "^0.3.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "^6.26.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^8.0.0",
+    "crypto-js": "^3.1.9-1",
+    "moment": "^2.21.0",
+    "node-sass": "^4.7.2",
+    "parcel-bundler": "^1.6.2"
+  }
+}

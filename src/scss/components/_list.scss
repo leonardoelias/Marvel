@@ -1,0 +1,105 @@
+.list-person {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 0;
+  width: 100%;
+  & li > div {
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.list-person__header {
+  background-color: $color1;
+  color: #fff;
+  float: left;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+
+  &:nth-child(2),
+  &:nth-child(3) {
+    display: none;
+  }
+}
+
+.content__center,
+.content__right {
+  display: none;
+}
+
+.person__item {
+  border-bottom: 1px solid $color1;
+  cursor: pointer;
+  display: flex;
+  list-style: none;
+  overflow: hidden;
+  padding: 18px;
+  transition: background-color 0.5s ease;
+  width: 100%;
+  &:hover {
+    background-color: rgba(212, 32, 38, 0.1);
+  }
+}
+
+.person__image {
+  border-radius: 50%;
+  width: 71px;
+  float: left;
+}
+
+.person__name {
+  color: #000000;
+  font-size: 21px;
+  font-weight: 400;
+  margin-left: 25px;
+  text-decoration: none;
+}
+
+.person__series span,
+.person__events span {
+  color: #000000;
+  display: block;
+  font-size: 21px;
+  line-height: 24px;
+  padding-left: 10px;
+}
+
+.person__series .person__series--empty,
+.person__events .person__series--empty,
+.person__series--empty {
+  color: $color1;
+}
+
+.person__invisible {
+  display: none !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .list-person__header {
+    width: calc(100% / 3) !important;
+    &:nth-child(2) {
+      border-left: 10px solid #fff;
+      border-right: 10px solid #fff;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      display: block;
+    }
+  }
+
+  .list-person li > div,
+  .content__center,
+  .content__right {
+    display: flex;
+    width: calc(100% / 3);
+  }
+
+  .person__item {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,29 @@
+.pagination {
+  text-align: center;
+  margin: 16px 0;
+  height: calc(25vh - 16px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination-list {
+  display: inline-block;
+  a {
+    border: 1px solid $color1;
+    border-radius: 100%;
+    color: $color1;
+    float: left;
+    font-size: 20px;
+    font-weight: 400;
+    height: 32px;
+    margin: 0 10px;
+    padding: 5px 0 0;
+    text-decoration: none;
+    transition: background-color $transition;
+    width: 32px;
+    &:hover {
+      color: #fff;
+      background-color: $color1;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Busca Marvel - Teste Leonardo Elias</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page container">
+        <header class="page-head">
+            <h1>
+                BUSCA MARVEL
+                <span>Teste Front-End</span>
+            </h1>
+            <span class="page-head__label">Leonardo Elias</span>
+        </header>
+
+        <main>
+            <div class="search">
+                <label for="search" class="search__label">Nome do personagem:</label>
+                <input type="search" id="search" class="search__input">
+            </div>
+            <ul id="list-person" class="list-person"></ul>
+            <div id="pagination" class="pagination">
+                <nav class="pagination-list" role="navigation">
+                    <a href="#1">1</a>
+                    <a href="#2">2</a>
+                    <a href="#3">3</a>
+                    <a href="#4">4</a>
+                    <a href="#5">5</a>
+                    <a href="#6">6</a>
+                </nav>
+            </div>
+        </main>
+    </div>
+    <div id="modal" class="modal__overlay" role="dialog">
+        <span class="close">×</span>
+        <div class="modal__wrap"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

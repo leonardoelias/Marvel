@@ -1,0 +1,45 @@
+.page-head {
+  grid-column: span 12;
+  padding: 20px 42px 34px;
+  h1 {
+    font-weight: 900;
+    font-size: 27px;
+    line-height: 32px;
+    float: left;
+    margin: 0;
+    position: relative;
+    span {
+      font-weight: 300;
+    }
+    &:after {
+      content: "";
+      border-bottom: 4px solid $color1;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 54px;
+      height: 1px;
+    }
+  }
+  .page-head__label {
+    color: $titleColor;
+    display: none;
+    float: right;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-head {
+    grid-column: span 12;
+    padding: 20px 40px;
+    h1 {
+      font-size: 24px;
+    }
+    .page-head__label {
+      display: block;
+    }
+  }
+}
