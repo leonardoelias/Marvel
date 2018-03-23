@@ -39,7 +39,8 @@ body {
   font-size: 1rem;
   color: #4e4e4e;
   margin: 0;
-  font-family: "Roboto", Arial; }
+  font-family: "Roboto", Arial;
+  border-bottom: 10px solid #d42026; }
 
 h1,
 h2,

@@ -7,6 +7,8 @@ body {
   color: $textColor;
   margin: 0;
   font-family: $fontFamilyText;
+
+  border-bottom: 10px solid $color1;
 }
 
 h1,
