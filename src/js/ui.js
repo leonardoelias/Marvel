@@ -7,6 +7,7 @@ import { http } from "./api";
 import { Persons } from "./components/Person";
 import { Pagination } from "./components/Pagination";
 import { Modal } from "./components/Modal";
+import { ScrollTop } from "./components/ScrollTop";
 
 class UI {
   constructor() {
@@ -54,6 +55,7 @@ class UI {
 
         Persons(response.data.results);
         Pagination(this.totalPages, this.countPages, this.currentPage);
+        ScrollTop("#list-person");
       })
       .then(response => {
         this.initEvents();
