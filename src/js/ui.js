@@ -12,6 +12,9 @@ class UI {
   constructor() {
     this.handlePagination = this.handlePagination.bind(this);
     this.openModal = this.openModal.bind(this);
+    this.totalPages = "";
+    this.countPages = "";
+    this.currentPage = 1;
   }
 
   getCharacters(origOptions = {}) {
@@ -47,7 +50,10 @@ class UI {
     http
       .get(url)
       .then(response => {
+        this.currentPage = parseInt(pageOff);
+
         Persons(response.data.results);
+        Pagination(this.totalPages, this.countPages, this.currentPage);
       })
       .then(response => {
         this.initEvents();
@@ -58,24 +64,24 @@ class UI {
   }
 
   filter(e) {
-    let characters = document.querySelectorAll(".person__item");
+    let persons = document.querySelectorAll(".person__item");
 
     if (this.value.length > 0) {
-      for (let i = 0; i < characters.length; i++) {
-        let character = characters[i];
-        let contentName = character.querySelector(".person__name");
+      for (let i = 0; i < persons.length; i++) {
+        let person = persons[i];
+        let contentName = person.querySelector(".person__name");
         let name = contentName.textContent;
         let expression = new RegExp(this.value, "i");
         if (!expression.test(name)) {
-          character.classList.add("character__invisible");
+          person.classList.add("person__invisible");
         } else {
-          character.classList.remove("character__invisible");
+          person.classList.remove("person__invisible");
         }
       }
     } else {
-      for (let i = 0; i < characters.length; i++) {
-        let character = characters[i];
-        character.classList.remove("character__invisible");
+      for (let i = 0; i < persons.length; i++) {
+        let person = persons[i];
+        person.classList.remove("person__invisible");
       }
     }
   }
@@ -130,7 +136,14 @@ class UI {
     http
       .get(url)
       .then(response => {
-        Persons(response.data.results);
+        const { results, total, count } = response.data;
+
+        this.totalPages = total;
+        this.countPages = count;
+        this.currentPage = 1;
+
+        Persons(results);
+        Pagination(this.totalPages, this.countPages, this.currentPage);
       })
       .then(response => {
         this.initEvents();

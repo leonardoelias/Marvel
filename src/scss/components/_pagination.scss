@@ -8,22 +8,29 @@
 }
 .pagination-list {
   display: inline-block;
-  a {
+  .pagination-item {
     border: 1px solid $color1;
     border-radius: 100%;
     color: $color1;
     float: left;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
-    height: 32px;
+    height: 42px;
     margin: 0 10px;
-    padding: 5px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     transition: background-color $transition;
-    width: 32px;
+    width: 42px;
+  }
+  a.pagination-item {
     &:hover {
       color: #fff;
       background-color: $color1;
     }
+  }
+  span.pagination-item {
+    opacity: 0.2;
   }
 }
