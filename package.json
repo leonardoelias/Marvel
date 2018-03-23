@@ -1,13 +1,14 @@
 {
-  "name": "front-end-starter",
+  "name": "marvel-api",
   "version": "1.0.0",
   "description": "",
   "private": false,
   "main": "app.js",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html --no-minify --public-url /"
   },
-  "author": "SundownDEV",
+  "author": "LeonardoElias",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",
