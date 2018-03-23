@@ -19,7 +19,6 @@ function renderSeries(series) {
 }
 
 export const Modal = person => {
-  console.log(person);
   const markup = `
     <img src="${person.thumbnail.path}.${person.thumbnail.extension}">
     <p class="modal--name">${person.name}</p>

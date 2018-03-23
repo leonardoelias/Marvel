@@ -227,24 +227,31 @@ main {
 
 .pagination-list {
   display: inline-block; }
-  .pagination-list a {
+  .pagination-list .pagination-item {
     border: 1px solid #d42026;
     border-radius: 100%;
     color: #d42026;
     float: left;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
-    height: 32px;
+    height: 42px;
     margin: 0 10px;
-    padding: 5px 0 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
     text-decoration: none;
     -webkit-transition: background-color ease-out 0.4s;
     -o-transition: background-color ease-out 0.4s;
     transition: background-color ease-out 0.4s;
-    width: 32px; }
-    .pagination-list a:hover {
-      color: #fff;
-      background-color: #d42026; }
+    width: 42px; }
+  .pagination-list a.pagination-item:hover {
+    color: #fff;
+    background-color: #d42026; }
+  .pagination-list span.pagination-item {
+    opacity: 0.2; }
 
 #modal {
   background: #fff;

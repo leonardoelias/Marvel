@@ -12,6 +12,9 @@ class UI {
   constructor() {
     this.handlePagination = this.handlePagination.bind(this);
     this.openModal = this.openModal.bind(this);
+    this.totalPages = "";
+    this.countPages = "";
+    this.currentPage = 1;
   }
 
   getCharacters(origOptions = {}) {
@@ -47,7 +50,10 @@ class UI {
     http
       .get(url)
       .then(response => {
+        this.currentPage = parseInt(pageOff);
+
         Persons(response.data.results);
+        Pagination(this.totalPages, this.countPages, this.currentPage);
       })
       .then(response => {
         this.initEvents();
@@ -130,7 +136,14 @@ class UI {
     http
       .get(url)
       .then(response => {
-        Persons(response.data.results);
+        const { results, total, count } = response.data;
+
+        this.totalPages = total;
+        this.countPages = count;
+        this.currentPage = 1;
+
+        Persons(results);
+        Pagination(this.totalPages, this.countPages, this.currentPage);
       })
       .then(response => {
         this.initEvents();
