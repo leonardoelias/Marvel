@@ -19,6 +19,12 @@ $ npm start OR parcel index.html
 
 Open the project url `http://localhost:1234/`
 
+Build
+
+```
+$ npm run build
+```
+
 ## Features
 
 ###
