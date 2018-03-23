@@ -14,6 +14,12 @@
     width: 150px;
     height: 150px;
   }
+  .close {
+    display: none;
+  }
+  &.open .close {
+    display: block;
+  }
 }
 
 .modal__overlay {

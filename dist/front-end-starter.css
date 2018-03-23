@@ -261,6 +261,10 @@ main {
     border: 4px solid #d42026;
     width: 150px;
     height: 150px; }
+  #modal .close {
+    display: none; }
+  #modal.open .close {
+    display: block; }
 
 .modal__overlay {
   background: rgba(255, 255, 255, 0.9);
