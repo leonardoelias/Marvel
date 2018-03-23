@@ -248,6 +248,10 @@ main {
     -o-transition: background-color ease-out 0.4s;
     transition: background-color ease-out 0.4s;
     width: 42px; }
+    .pagination-list .pagination-item.pagination-item__active {
+      background: #d42026;
+      color: #fff;
+      pointer-events: none; }
   .pagination-list a.pagination-item:hover {
     color: #fff;
     background-color: #d42026; }

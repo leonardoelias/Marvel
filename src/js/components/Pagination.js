@@ -1,10 +1,12 @@
-function renderPages(pages) {
+function renderPages(pages, currentPage) {
   const result = pages
     .map(page => {
       if (page === "...") {
         return `<span class="pagination-item">${page}</span>`;
       } else {
-        return `<a class="pagination-item" href="#${page}">${page}</a>`;
+        return `<a class="pagination-item ${
+          page === currentPage ? "pagination-item__active" : ""
+        } " href="#${page}">${page}</a>`;
       }
     })
     .join("");
@@ -51,7 +53,7 @@ export const Pagination = (total, count, currentPage) => {
 
   const markup = `
     <nav class="pagination-list" role="navigation">
-      ${renderPages(mountPages)}
+      ${renderPages(mountPages, currentPage)}
     </nav>
   `;
 

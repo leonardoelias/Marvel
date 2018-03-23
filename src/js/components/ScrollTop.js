@@ -1,23 +1,16 @@
-Math.easeInOutQuad = function(t, b, c, d) {
-  t /= d / 2;
-  if (t < 1) return c / 2 * t * t + b;
-  t--;
-  return -c / 2 * (t * (t - 2) - 1) + b;
-};
-
-export const scrollTo = (element, to, duration) => {
-  let start = element.scrollTop,
-    change = to - start,
-    currentTime = 0,
-    increment = 20;
-
-  let animateScroll = function() {
-    currentTime += increment;
-    let val = Math.easeInOutQuad(currentTime, start, change, duration);
-    element.scrollTop = val;
-    if (currentTime < duration) {
-      setTimeout(animateScroll, increment);
-    }
-  };
-  animateScroll();
-};
+export function ScrollTop(selector) {
+  var speed = 10;
+  window.scrollTo(0, 0);
+  Array.prototype.slice
+    .call(document.querySelectorAll(selector))
+    .forEach(item => {
+      var _interval = setInterval(() => {
+        if (item.scrollTop <= 0) {
+          clearInterval(_interval);
+        } else {
+          item.scrollTop -= speed;
+          speed += 1;
+        }
+      }, 10);
+    });
+}

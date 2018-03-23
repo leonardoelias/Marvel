@@ -23,6 +23,12 @@
     text-decoration: none;
     transition: background-color $transition;
     width: 42px;
+
+    &.pagination-item__active {
+      background: $color1;
+      color: #fff;
+      pointer-events: none;
+    }
   }
   a.pagination-item {
     &:hover {
